@@ -7,6 +7,8 @@ public class Matrix {
     Row r3 = new Row(1,2,3);
     Row[] rows = {r1, r2, r3};
 
+    public String sRow;
+
     int Det;
     int detA;
     int detB;
@@ -21,6 +23,8 @@ public class Matrix {
         rows[0].Display();
         rows[1].Display();
         rows[2].Display();
+
+        sRow = Arrays.toString(rows[0].cel)+"\n" + Arrays.toString(rows[1].cel)+"\n" + Arrays.toString(rows[2].cel);
     }
 
     public void Det() {

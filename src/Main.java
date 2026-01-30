@@ -1,3 +1,10 @@
+import org.w3c.dom.Text;
+
+import java.awt.*;
+import java.io.*;
+import java.util.Arrays;
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,5 +17,21 @@ public class Main {
         Matrix matrix = new Matrix(rows);
         matrix.Display();
         matrix.Det();
+
+        // Creating instance of JFrame
+        JFrame frame = new JFrame();
+
+        TextArea textArea = new TextArea(matrix.sRow);
+        textArea.setBounds(150, 300, 220, 100);
+        frame.add(textArea);
+
+        // 400 width and 500 height
+        frame.setSize(500, 600);
+
+        // using no layout managers
+        frame.setLayout(null);
+
+        // making the frame visible
+        frame.setVisible(true);
     }
 }
